@@ -36,4 +36,14 @@ class ScanListProvider extends ChangeNotifier {
 
     notifyListeners();
   }
+
+  esborrarPerId(int id) async {
+    final affected = await DBPreferences.db.deleteScanById(id);
+
+    this.scans.removeWhere(
+          (element) => element.id == id,
+        );
+
+    notifyListeners();
+  }
 }

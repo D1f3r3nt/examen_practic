@@ -18,6 +18,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final scanListProvider = Provider.of<ScanListProvider>(context);
+    scanListProvider.carregarScans();
     final scans = scanListProvider.scans;
 
     return Scaffold(
@@ -35,6 +36,7 @@ class HomeScreen extends StatelessWidget {
         itemBuilder: (context, index) => ListTile(
           title: Text(scans[index].titol),
           subtitle: Text(scans[index].quantitat.toString()),
+          onTap: () => scanListProvider.esborrarPerId(scans[index].id!),
         ),
       ),
       floatingActionButton: FloatingActionButton(

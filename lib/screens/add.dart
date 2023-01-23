@@ -41,7 +41,7 @@ class Add extends StatelessWidget {
                         hintText: 'Posi el titol',
                         labelText: 'Titol',
                         counterText: '',
-                        icon: Icon(Icons.email,
+                        icon: Icon(Icons.text_fields,
                             size: 32.0, color: Colors.blue[800]),
                       ),
                       onSaved: (text) => _titol = text,

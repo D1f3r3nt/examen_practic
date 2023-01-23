@@ -69,4 +69,12 @@ class DBPreferences {
 
     return res;
   }
+
+  // Per borrar per ID
+  Future<int> deleteScanById(int id) async {
+    final db = await database;
+    final res = await db.delete('Despesa', where: 'id = ?', whereArgs: [id]);
+
+    return res;
+  }
 }
