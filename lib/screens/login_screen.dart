@@ -114,7 +114,7 @@ class _LoginScreenState extends State<LoginScreen>
                     _isChecked = value!;
                     setState(() {});
                   },
-                  title: Text('Recorda\'m'),
+                  title: const Text('Recorda\'m'),
                   controlAffinity: ListTileControlAffinity.leading,
                 ),
                 IconButton(
@@ -156,10 +156,10 @@ class AnimatedLogo extends AnimatedWidget {
     return Opacity(
       opacity: _opacityTween.evaluate(animation),
       child: Container(
-        margin: EdgeInsets.symmetric(vertical: 10.0),
+        margin: const EdgeInsets.symmetric(vertical: 10.0),
         height: _sizeTween.evaluate(animation), // Aumenta la altura
         width: _sizeTween.evaluate(animation), // Aumenta el ancho
-        child: FlutterLogo(),
+        child: const FlutterLogo(),
       ),
     );
   }
