@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
-import '../provider/despesa_list_provider.dart';
+import '../provider/provider.dart';
 import 'screens.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -17,9 +16,9 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final scanListProvider = Provider.of<ScanListProvider>(context);
+    final scanListProvider = Provider.of<DespesaListProvider>(context);
     scanListProvider.carregarScans();
-    final scans = scanListProvider.scans;
+    final scans = scanListProvider.despesa;
 
     return Scaffold(
       appBar: AppBar(

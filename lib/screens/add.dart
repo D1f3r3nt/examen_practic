@@ -1,8 +1,7 @@
-import 'package:examen_practic/models/despesa.dart';
+import 'package:examen_practic/models/models.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
-import '../provider/despesa_list_provider.dart';
+import '../provider/provider.dart';
 
 class Add extends StatelessWidget {
   final GlobalKey<FormState> _key = GlobalKey();
@@ -14,7 +13,7 @@ class Add extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final scanListProvider =
-        Provider.of<ScanListProvider>(context, listen: false);
+        Provider.of<DespesaListProvider>(context, listen: false);
 
     return Scaffold(
       body: Center(
@@ -65,6 +64,9 @@ class Add extends StatelessWidget {
                             size: 32.0, color: Colors.blue[800]),
                       ),
                       onSaved: (text) => _quantitat = double.parse(text!),
+                    ),
+                    const SizedBox(
+                      height: 20,
                     ),
                     IconButton(
                       onPressed: () {

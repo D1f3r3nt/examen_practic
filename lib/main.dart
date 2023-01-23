@@ -24,7 +24,7 @@ class AppState extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(
-          create: (context) => ScanListProvider(),
+          create: (context) => DespesaListProvider(),
         ),
       ],
       child: MyApp(),

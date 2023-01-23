@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:examen_practic/models/despesa.dart';
+import 'package:examen_practic/models/models.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
