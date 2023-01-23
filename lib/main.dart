@@ -1,7 +1,6 @@
 import 'package:examen_practic/preferences/db_preferences.dart';
 import 'package:examen_practic/provider/despesa_list_provider.dart';
 import 'package:examen_practic/screens/add.dart';
-import 'package:examen_practic/screens/home_screen.dart';
 import 'package:examen_practic/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
